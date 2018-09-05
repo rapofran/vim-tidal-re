@@ -25,4 +25,4 @@ TIDAL_TEMPO_IP=${TIDAL_TEMPO_IP:-"127.0.0.1"}
 GHCI=${GHCI:-"stack ghci"}
 
 # Run GHCI and load Tidal bootstrap file
-TIDAL_TEMPO_IP=$TIDAL_TEMPO_IP $GHCI -XOverloadedStrings -ghci-script $TIDAL_BOOT_PATH "$@"
+TIDAL_TEMPO_IP=$TIDAL_TEMPO_IP $GHCI --ghci-options -XOverloadedStrings --ghci-options -ghci-script $TIDAL_BOOT_PATH "$@"
